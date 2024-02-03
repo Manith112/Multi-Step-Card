@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./multi-step-form-main/assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            MarineBlue: "hsl(213, 96%, 18%)",
+            PurplishBlue: "hsl(243, 100%, 62%)",
+            PastelBlue: "hsl(228, 100%, 84%)",
+            LightBlue: "hsl(206, 94%, 87%)",
+            StrawberryRed: "hsl(354, 84%, 57%)",
+            CoolGray: "hsl(231, 11%, 63%)",
+            LightGray: "hsl(229, 24%, 87%)",
+            Magnolia: "hsl(217, 100%, 97%)",
+            Alabaster: "hsl(231, 100%, 99%)",
+            White: "hsl(0, 0%, 100%)",
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="justify-center bg-LightGray item-center flex min-h-screen relative">
+    <div class="hidden max-[600px]:absolute max-[600px]:top-[20px] max-[600px]:flex max-[600px]:gap-[10px]">
+        <div id="dot1" class="px-[10px] py-[2px] rounded-[50%] h-[30px] mt-[10px] dot">
+            <p class=" font-[600] text- MarineBlue">1</p>
+        </div>
+        <div id="dot2" class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px]  h-[30px] mt-[10px] dot">
+            <p class="font-[600] text-White">2</p>
+        </div>
+        <div id="dot3" class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] h-[30px] mt-[10px] dot">
+            <p class="font-[600] text-White">3</p>
+        </div>
+        <div id="dot4" class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] h-[30px] mt-[10px] dot">
+            <p class="font-[600] text-White">4</p>
+        </div>
+    </div>
+
+    <!-- card-1  -->
+    <div id="step1" class="step bg-White rounded-[10px] p-[10px] w-[1000px] h-[530px] my-[auto] flex max-[600px]:mx-[20px] max-[800px]:w-full max-[600px]:my-[100px] ">
+        <!-- left side  -->
+        <div class="content rounded-[10px]  px-[20px] py-[40px] max-[600px]:hidden">
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] bg-LightBlue h-[30px] mt-[10px]">
+                <p class="text-MarineBlue font-[600] ">1</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 1</p>
+                <p class="text-LightGray uppercase font-[600]">your info</p>
+            </div>
+        </div>
+            
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">2</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 2</p>
+                <p class="text-LightGray uppercase font-[600]">select plan</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">3</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 3</p>
+                <p class="text-LightGray uppercase font-[600]">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[180px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">4</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 4</p>
+                <p class="text-LightGray uppercase font-[600]">Summary</p>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- right-side  -->
+        <div class="px-[100px] py-[50px] max-[950px]:px-[50px] max-[600px]:px-[20px] wrapper">
+            <h1 class="text-MarineBlue font-[600] text-[30px]">Personal Info</h1>
+            <p class="text-CoolGray pb-[20px]"> Please provide your name, email address, and phone number.</p>
+            <div class="py-[10px]">
+                <div class="flex justify-between">
+                <p class="text-MarineBlue pb-[5px]">Name</p>
+                <p class="false-one text-StrawberryRed font-[600] "></p>
+            </div>
+                <input id="name" type="text" placeholder="e.g. Stephen King" class="p-[10px] w-full border-solid border-[1px] border-CoolGray rounded-[10px] hover:border-PurplishBlue">
+            </div>
+
+            <div class="py-[10px]">
+                <div class="flex justify-between">
+                    <p class="text-MarineBlue pb-[5px]">Email Address</p>
+                    <p class="false-two text-StrawberryRed font-[600] "></p>
+                </div>
+                <input id="email" type="text" placeholder=" e.g. stephenking@lorem.com" class="p-[10px] w-full border-solid border-[1px] border-CoolGray rounded-[10px] hover:border-PurplishBlue">
+            </div>
+
+            <div class="py-[10px]">
+                <div class="flex justify-between">
+                    <p class="text-MarineBlue pb-[5px]">Phone Number</p>
+                    <p class="false-three text-StrawberryRed font-[600] "></p>
+                </div>
+                <input id="phone" type="text" placeholder="e.g. +1 234 567 890" class="p-[10px] w-full border-solid border-[1px] border-CoolGray rounded-[10px] hover:border-PurplishBlue">
+            </div>
+            <button class="px-[10px] py-[5px] bg-MarineBlue mt-[40px] text-White rounded-[5px] ml-auto mr-0 block hover:bg-PurplishBlue max-[950px]:mt-[20px]" onclick="nextStep()">Next Step</button>
+        </div>
+    </div>
+
+    <!-- card 2  -->
+    <div id="step2" class="step bg-White rounded-[10px] p-[10px] w-[1000px] h-[530px] my-[auto] flex max-[600px]:mx-[20px] max-[800px]:w-full max-[600px]:my-[100px] max-[600px]:h-[600px]">
+      
+        <div class="content rounded-[10px] px-[20px] py-[40px] max-[600px]:hidden">
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">1</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 1</p>
+                <p class="text-LightGray uppercase font-[600]">your info</p>
+            </div>
+        </div>
+            
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] bg-LightBlue h-[30px] mt-[10px]">
+                <p class="text-MarineBlue font-[600] ">2</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 2</p>
+                <p class="text-LightGray uppercase font-[600]">select plan</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">3</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 3</p>
+                <p class="text-LightGray uppercase font-[600]">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[180px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">4</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 4</p>
+                <p class="text-LightGray uppercase font-[600]">Summary</p>
+            </div>
+        </div>
+
+        </div>
+
+        
+        <div class="px-[100px] py-[50px] max-[950px]:px-[50px] max-[950px]:w-full max-[600px]:px-[20px] max-[850px]:py-[10px] max-[600px]:w-full wrapper">
+            <h1 class="text-MarineBlue font-[600] text-[30px]">Select Your Plan</h1>
+            <p class="text-CoolGray pb-[20px]">You have the option of monthly or yearly billing.</p>
+          <div class="flex gap-[10px] max-[850px]:flex-col " >
+            <div id="rating1" onclick="selectRating(1)" class="p-[20px] border-solid border-[1px] border-LightGray hover:border-PurplishBlue rounded-[10px] w-[150px]  box-select
+            max-[850px]:w-[100%] max-[850px]:flex max-[850px]:gap-[10px]">
+                <img src="./multi-step-form-main/assets/images/icon-arcade.svg" alt="" class="mb-[40px] max-[850px]:mb-[0px]">
+                <div>
+                    <h1 class="text-MarineBlue font-[600] text-[20px]">Arcade</h1>
+                    <p  class="text-CoolGray pt-[5px] monthly-paid">$9/mo</p>
+                    <p class="hidden yearly-paid text-CoolGray pt-[5px]">$90/yr</p>
+                    <p class="year-free text-MarineBlue font-[600]"></p>
+                </div>
+            </div>
+
+            <div id="rating2" onclick="selectRating(2)" class="p-[20px] border-solid border-[1px] border-LightGray hover:border-PurplishBlue rounded-[10px] w-[150px] box-select
+            max-[850px]:w-[100%] max-[850px]:flex max-[850px]:gap-[10px]">
+                <img src="./multi-step-form-main/assets/images/icon-advanced.svg" alt="" class="mb-[40px] max-[850px]:mb-[0px]">
+                <div>
+                    <h1 class="text-MarineBlue font-[600] text-[20px]">Advanced</h1>
+                    <p class="text-CoolGray pt-[5px] monthly-paid">$12/mo</p>
+                    <p class="hidden yearly-paid text-CoolGray pt-[5px]">$120/yr</p>
+                    <p class="year-free text-MarineBlue font-[600]"></p>
+                </div>
+            </div>
+
+            <div id="rating3" onclick="selectRating(3)" class="p-[20px] border-solid border-[1px] border-LightGray rounded-[10px] w-[150px] hover:border-PurplishBlue box-select
+            max-[850px]:w-[100%] max-[850px]:flex max-[850px]:gap-[10px]">
+                <img src="./multi-step-form-main/assets/images/icon-pro.svg" alt="" class="mb-[40px] max-[850px]:mb-[0px]">
+                <div>
+                    <h1 class="text-MarineBlue font-[600] text-[20px]">Pro</h1>
+                    <p  class="text-CoolGray pt-[5px] monthly-paid">$15/mo</p>
+                    <p class="hidden yearly-paid text-CoolGray pt-[5px]">$150/yr</p>
+                    <p class="year-free text-MarineBlue font-[600] "></p>
+                </div>
+          </div>
+        </div>
+
+        <div class="toggle-container max-[600px]:mb-[20px]">
+            <p id="monthly" class="text-MarineBlue font-[600]">Monthly</p>
+        <div class="toggle-switch">
+            <input type="checkbox" id="toggle" class="checkbox" onchange="toggleChecked()">
+            <label for="toggle" class="label"></label>
+        </div>   
+            <p id="yearly" class="text-CoolGray font-[600]">Yearly</p>
+        </div>
+           
+        <div class="flex justify-between">
+            <button class="px-[10px] py-[5px] text-CoolGray hover:text-MarineBlue cursor-pointer" onclick="prevStep()">Go Back</button>
+            <button class="px-[10px] py-[5px] bg-MarineBlue text-White rounded-[5px] hover:bg-PurplishBlue" onclick="validateNextStep(2)">Next Step</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- card 3  -->
+    <div id="step3" class="step bg-White rounded-[10px] p-[10px] w-[1000px] h-[530px] my-[auto] flex max-[600px]:mx-[20px] max-[800px]:w-full max-[600px]:my-[100px]">
+      
+        <div class="content rounded-[10px] px-[20px] py-[40px] max-[600px]:hidden">
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">1</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 1</p>
+                <p class="text-LightGray uppercase font-[600]">your info</p>
+            </div>
+        </div>
+            
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">2</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 2</p>
+                <p class="text-LightGray uppercase font-[600]">select plan</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] bg-LightBlue h-[30px] mt-[10px]">
+                <p class="text-MarineBlue font-[600] ">3</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 3</p>
+                <p class="text-LightGray uppercase font-[600]">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[180px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">4</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 4</p>
+                <p class="text-LightGray uppercase font-[600]">Summary</p>
+            </div>
+        </div>
+
+        </div>
+
+        
+        <div class=" px-[100px] py-[50px] max-[950px]:px-[50px]  max-[600px]:px-[20px] max-[850px]:py-[10px] max-[600px]:w-full wrapper">
+            <h1 class="text-MarineBlue font-[600] text-[30px]">Pick add-ons</h1>
+            <p class="text-CoolGray pb-[20px]">Add-ons help enhance your gaming experience.</p>
+        
+          
+          <div id="check1" onclick="stepCheckbox('checkbox1')" class="choose flex justify-between border-solid border-[1px] border-CoolGray p-[10px] rounded-[10px] w-[full] my-[20px] hover:border-PurplishBlue">
+            <div class="flex gap-[20px]">
+            <input type="checkbox" class="check" id="checkbox1">
+            <div class="flex flex-col pr-[150px] max-[800px]:pr-[0px]">
+                <span class="text-MarineBlue font-[600]">Online service</span>
+                <span class="text-CoolGray text-[14px] max-[800px]:text-[12px]">Access to multiplayer games</span>
+            </div>
+        </div>
+        <p class="text-PurplishBlue font-[600] pt-[10px] pick-month">+$1/mo</p>
+        <p class="hidden text-PurplishBlue font-[600] pt-[10px] pick-year">+$10/yr</p>
+          </div>
+
+          <div id="check2" onclick="stepCheckbox('checkbox2')" class="choose flex justify-between border-solid border-[1px] border-CoolGray p-[10px] rounded-[10px] w-[full] my-[20px] hover:border-PurplishBlue">
+            <div class="flex gap-[20px]">
+            <input type="checkbox" class="check" id="checkbox2">
+            <div class="flex flex-col pr-[150px] max-[800px]:pr-[0px]">
+                <span class="text-MarineBlue font-[600]"> Larger storage</span>
+                <span class=" text-CoolGray text-[14px] max-[800px]:text-[12px]">Extra 1TB of cloud save</span>
+            </div>
+        </div>
+        <p class="text-PurplishBlue font-[600] pt-[10px] pick-month">+$2/mo</p>
+        <p class="hidden text-PurplishBlue font-[600] pt-[10px] pick-year">+$20/yr</p>
+          </div>
+
+          <div id="check3" onclick="stepCheckbox('checkbox3')" class="choose flex justify-between border-solid border-[1px] border-CoolGray p-[10px] rounded-[10px] w-[full] my-[20px] hover:border-PurplishBlue">
+            <div class="flex gap-[20px]">
+            <input type="checkbox" class="check" id="checkbox3">
+            <div class="flex flex-col pr-[150px] max-[800px]:pr-[0px]">
+                <span class="text-MarineBlue font-[600]">Customizable Profile</span>
+                <span class=" text-CoolGray text-[14px] max-[800px]:text-[12px]">Custom theme on your profile</span>
+            </div>
+        </div>
+        <p class="text-PurplishBlue font-[600] pt-[10px] pick-month">+$2/mo</p>
+        <p class="hidden text-PurplishBlue font-[600] pt-[10px] pick-year">+$20/yr</p>
+          </div>
+         
+        
+
+        
+           
+        <div class="flex justify-between pt-[60px] box">
+            <button class="px-[10px] py-[5px] text-CoolGray hover:text-MarineBlue cursor-pointer" onclick="prevStep()">Go Back</button>
+            <button class="px-[10px] py-[5px] bg-MarineBlue text-White rounded-[5px] hover:bg-PurplishBlue" onclick="validateNextStep(3)">Next Step</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- card 4 -->
+    <div id="step4" class="step bg-White rounded-[10px] p-[10px] w-[1000px] h-[530px] my-[auto] flex max-[600px]:mx-[20px] max-[800px]:w-full max-[600px]:my-[100px]">
+      
+        <div class="content rounded-[10px] px-[20px] py-[40px] max-[600px]:hidden">
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">1</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 1</p>
+                <p class="text-LightGray uppercase font-[600]">your info</p>
+            </div>
+        </div>
+            
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">2</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 2</p>
+                <p class="text-LightGray uppercase font-[600]">select plan</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">3</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 3</p>
+                <p class="text-LightGray uppercase font-[600]">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[180px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] bg-LightBlue h-[30px] mt-[10px]">
+                <p class="text-MarineBlue font-[600] ">4</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 4</p>
+                <p class="text-LightGray uppercase font-[600]">Summary</p>
+            </div>
+        </div>
+
+        </div>
+
+        
+        <div class=" px-[100px] py-[50px] max-[950px]:px-[50px]  max-[600px]:px-[20px] max-[850px]:py-[30px] max-[600px]:w-full wrapper">
+            <h1 class="text-MarineBlue font-[600] text-[30px]"> Finishing up</h1>
+            <p class="text-CoolGray pb-[20px]">Double-check everything looks OK before confirming.</p>
+        <div class="bg-LightGray rounded-[10px] p-[20px] w-[500px]  max-[950px]:w-full">
+            <div class="flex justify-between">
+                <div>
+                <h1 class="chosenplan font-[600] text-MarineBlue"></h1>
+                <span class="underline text-CoolGray cursor-pointer hover:text-MarineBlue" onclick="changeMethod()">Change</span>
+            </div>
+                <input type="button" class="price font-[600] text-MarineBlue" value="" />
+            
+            </div>
+             <hr class="bg-MarineBlue my-[10px]">
+        <div id="add-ons" class=" justify-between add-ons">
+            <span class="text-CoolGray">Online Service</span>
+            <input type="button" class="add-onsvalue text-MarineBlue" id="value1" />
+        </div>
+
+        <div id="add-ons2" class=" justify-between add-ons">
+            <span class="text-CoolGray">Larger Storage</span>
+            <input type="button" class="add-onsvalue text-MarineBlue" id="value2" />
+        </div>
+
+        <div id="add-ons3" class=" justify-between add-ons">
+            <span class="text-CoolGray">Customizable profile</span>
+            <input type="button" class="add-onsvalue text-MarineBlue" id="value3" />
+        </div>
+    </div>
+    <div class="py-[30px] flex justify-between">
+        
+        <span id="total-month" class="text-CoolGray">Total(per month)</span>
+        <span id="total-year" class="hidden text-CoolGray">Total(per year)</span>
+        <span id="total-price" class="text-[26px] text-PurplishBlue font-[600]"></span>
+    </div>
+
+        
+           
+        <div class="flex justify-between pt-[40px]">
+            <button class="px-[10px] py-[5px] text-CoolGray hover:text-MarineBlue cursor-pointer" onclick="prevStep()">Go Back</button>
+            <button class="px-[10px] py-[5px] bg-MarineBlue text-White rounded-[5px] hover:bg-PurplishBlue" onclick="validateNextStep(4)">Confirm</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- card 5  -->
+    <div id="step5" class="step bg-White rounded-[10px] p-[10px] w-[1000px] h-[530px] my-[auto] flex max-[600px]:mx-[20px] max-[800px]:w-full max-[600px]:my-[100px]">
+      
+        <div class="content rounded-[10px] px-[20px] py-[40px] max-[600px]:hidden">
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">1</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 1</p>
+                <p class="text-LightGray uppercase font-[600]">your info</p>
+            </div>
+        </div>
+            
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">2</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 2</p>
+                <p class="text-LightGray uppercase font-[600]">select plan</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[20px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] border-solid border-[1px] border-White  h-[30px] mt-[10px]">
+                <p class="text-White font-[600] ">3</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 3</p>
+                <p class="text-LightGray uppercase font-[600]">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="flex gap-[15px] mb-[180px]">
+            <div class="px-[10px] py-[2px] rounded-[50%] bg-LightBlue h-[30px] mt-[10px]">
+                <p class="text-MarineBlue font-[600] ">4</p>
+            </div>
+            <div class="">
+                <p class="uppercase text-CoolGray">step 4</p>
+                <p class="text-LightGray uppercase font-[600]">Summary</p>
+            </div>
+        </div>
+
+        </div>
+
+        
+       <div class="text-center px-[100px] my-auto flex-col w-full max-[600px]:px-[20px] wrapper">
+        <img src="./multi-step-form-main/assets/images/icon-thank-you.svg" alt="" class="w-[100px] mx-auto">
+        <h1 class="text-MarineBlue font-[600] text-[45px] py-[10px]">Thank you!</h1>
+        <p class="text-CoolGray"> Thanks for confirming your subscription! We hope you have fun 
+            using our platform. If you ever need support, please feel free 
+            to email us at support@loremgaming.com.</p>
+       </div>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
